@@ -12,5 +12,8 @@ class ClusterMan:
     # Constructor for the Cluster Manager class
     def __init__(self, nodes_file):
         self.nodes = Nodes(nodes_file=nodes_file)
-        multi_client = MultiClient(self.nodes)
-        # print self.nodes.to_string()
+        self.multi_client = MultiClient(self.nodes)
+
+    # Execute a command on all nodes
+    def execute_command(self, command):
+        self.multi_client.execute_command(command)
