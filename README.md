@@ -3,6 +3,12 @@ clusterman
 
 Web based (plus command line) utility to manage a cluster.
 
+# Setup
+* Run the following command:
+```
+./setup.sh
+```
+
 # Running from command line
 
 ### Adding a nodes file
