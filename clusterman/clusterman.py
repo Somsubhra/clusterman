@@ -11,5 +11,4 @@ class ClusterMan:
     # Constructor for the Cluster Manager class
     def __init__(self, nodes_file):
         self.nodes = Nodes(nodes_file=nodes_file)
-        nodes_list = self.nodes.get_list()
-        print(nodes_list)
+        print self.nodes.to_string()
