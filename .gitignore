@@ -1,0 +1,6 @@
+nodes
+*.pyc
+*.swp
+*~
+.idea/
+*.iml
