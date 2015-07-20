@@ -4,3 +4,4 @@ nodes
 *~
 .idea/
 *.iml
+*.log
