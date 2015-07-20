@@ -30,7 +30,7 @@ class MultiClient:
         for node in self.ssh_clients:
             stdin, stdout, stderr = self.ssh_clients[node].exec_command(command)
 
-            print "Node: " + node.server
+            print "Node: " + node.server + " Command: " + command
 
             output = ""
 
