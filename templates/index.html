@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clusterman</title>
+    <link rel="stylesheet" href="/static/jquery.terminal.css">
+    <style>
+        body {
+            background: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+
+<div id="terminal"></div>
+
+<script type="text/javascript" src="/static/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/static/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="/static/jquery.terminal-0.8.8.min.js"></script>
+<script type="text/javascript">
+    $("#terminal").terminal(function(command, term) {
+        term.echo("Command: " + command);
+    }, {
+        prompt: '>',
+        name: 'clusterman',
+        greetings: 'Welcome to clusterman web console!'
+    });
+</script>
+</body>
+</html>
