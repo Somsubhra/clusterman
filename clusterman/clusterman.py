@@ -16,4 +16,4 @@ class ClusterMan:
 
     # Execute a command on all nodes
     def execute_command(self, command):
-        self.multi_client.execute_command(command)
+        return self.multi_client.execute_command(command)

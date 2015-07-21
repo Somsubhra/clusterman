@@ -17,7 +17,7 @@ class CMParser:
             cm_file_obj = open(self.cm_file)
 
             for command in cm_file_obj.readlines():
-                self.cluster_manager.execute_command(command.rstrip())
+                print self.cluster_manager.execute_command(command.rstrip())
 
             cm_file_obj.close()
         except Exception as ex:

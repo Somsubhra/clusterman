@@ -19,7 +19,11 @@
 <script type="text/javascript" src="/static/jquery.terminal-0.8.8.min.js"></script>
 <script type="text/javascript">
     $("#terminal").terminal(function(command, term) {
-        term.echo("Command: " + command);
+        $.get("/api", {
+            command: command
+        }, function(data) {
+            term.echo(data.output);
+        });
     }, {
         prompt: '>',
         name: 'clusterman',

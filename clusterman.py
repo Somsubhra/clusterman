@@ -6,6 +6,7 @@ import sys
 from clusterman import ClusterMan
 from clusterman import CMParser
 
+
 # The main method
 def main():
     if len(sys.argv) > 2:
