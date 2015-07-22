@@ -29,7 +29,7 @@ clusterman.py <nodes_file> <cm_file>
 
 # Running the web console
 ### Adding a nodes file
-* Add a ```default.nodes file``` containing node data as specified above.
+* Add a ```default.nodes``` file containing node data as specified above.
 
 ### Get it running
 * Execute the following command to run the web console:
