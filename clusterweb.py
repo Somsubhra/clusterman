@@ -24,6 +24,7 @@ def index_handler():
     return render_template("index.html", connected_nodes=connected_nodes)
 
 
+# The API route
 @app.route('/api')
 def api_handler():
     output = cluster_manager.execute_command(request.args.get("command"))

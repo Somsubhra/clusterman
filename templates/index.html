@@ -11,23 +11,25 @@
     </style>
 </head>
 <body>
-
-<div id="terminal"></div>
-
 <script type="text/javascript" src="/static/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="/static/jquery.mousewheel.min.js"></script>
 <script type="text/javascript" src="/static/jquery.terminal-0.8.8.min.js"></script>
 <script type="text/javascript">
-    $("#terminal").terminal(function(command, term) {
+    $("body").terminal(function(command, term) {
+        term.pause();
         $.get("/api", {
             command: command
         }, function(data) {
+            term.resume();
             term.echo(data.output);
         });
     }, {
         prompt: '>',
         name: 'clusterman',
-        greetings: 'Welcome to clusterman web console!\nNodes in the cluster: {{ connected_nodes }}\nType a command to execute on the cluster.'
+        greetings: 'Welcome to clusterman web console!\nNodes in the cluster: {{ connected_nodes }}\nType a command to execute on the cluster.\n',
+        onBlur: function() {
+            return false;
+        }
     });
 </script>
 </body>
