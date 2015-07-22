@@ -17,6 +17,9 @@
         }, function(data) {
             term.resume();
             term.echo(data.output);
+        }).fail(function() {
+            term.resume();
+            term.echo("Error: Connection to clusterman lost.");
         });
     }, {
         prompt: '>',
