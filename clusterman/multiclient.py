@@ -28,10 +28,11 @@ class MultiClient:
 
     # Execute a command on all nodes
     def execute_command(self, command):
+        
+        output = ""
+
         for node in self.ssh_clients:
             stdin, stdout, stderr = self.ssh_clients[node].exec_command(command)
-
-            output = ""
 
             output += "Node: " + node.server + " Command: " + command + "\n"
 
@@ -41,4 +42,6 @@ class MultiClient:
             for line in stderr.readlines():
                 output += line
 
-            return output
+            output += "\n"
+
+        return output
