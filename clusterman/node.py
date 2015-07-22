@@ -13,4 +13,4 @@ class Node:
 
     # String representation of node
     def to_string(self):
-        return self.username + ":" + self.password + "@" + self.server
+        return self.server

@@ -34,6 +34,6 @@ class Nodes:
     def to_string(self):
         output = ""
         for node in self.nodes:
-            output += node.to_string() + "\n"
+            output += "<" + node.to_string() + "> "
 
         return output
