@@ -26,3 +26,14 @@ Web based (plus command line) utility to manage a cluster.
 ```
 clusterman.py <nodes_file> <cm_file>
 ```
+
+# Running the web console
+### Adding a nodes file
+* Add a ```default.nodes file``` containing node data as specified above.
+
+### Get it running
+* Execute the following command to run the web console:
+```
+./clusterweb.py
+```
+* Access the web console at http://localhost:8000
